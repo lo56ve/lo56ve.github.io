@@ -2,7 +2,7 @@
 layout: post
 title: js字符串和数组的操作方法
 categories: [blog ]
-tags: [js ]
+tags: [ ]
 description: 熟记操作方法
 ---
 
