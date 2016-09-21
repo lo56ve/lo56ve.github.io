@@ -157,7 +157,9 @@ replace()方法接收两个参数，第一个参数可以是一个字符串或�
 ### 3.push(),pop(),shift(),unshift()
 
 数组末端进，末端出	（栈）		push(),pop()
+
 数组末端进，前端出	（队列）		push(),shift()
+
 数组前端进，末端出				unshift(),pop()
 
 在数组末端发生的，pop(),push()
