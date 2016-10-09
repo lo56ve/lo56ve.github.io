@@ -10,7 +10,7 @@ description: 熟记操作方法
 
 # String
 
-### 1. charAt()和charAtCodeAt()
+### 1. charAt()和charCodeAt()
 
 用于访问字符串中特定字符，这两个字符串都接收一个参数，即基于0的字符位置，`charAt()`是返回给定位置的字符，`charCodeAt()`是返回该字符的编码。
 
@@ -68,7 +68,7 @@ concat()方法可以接受任意多个参数，也就是说可以通过它拼接
 	alert(stringValue.substring(3,-4));	//"hel"
 	alert(stringValue.substr(3,-4));		//""(空字符串)
 
-### 4.indexOf()和lastindexOf()
+### 4.indexOf()和lastIndexOf()
 
 这两种方法是从字符串中查找字符串的方法，一个从开头开始向后查找，一个从结尾向前查找，`返回子字符串第一次出现的位置（如果没有找到子字符串，则返回-1）`。这里第二个参数可选，表示从字符串中的哪个位置开始搜索。
 
