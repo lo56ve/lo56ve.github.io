@@ -43,7 +43,7 @@ call传递给函数的参数必须逐个列举出来，如：
 
 	sum.call(this,num1,num2);
 
-**其实传递参数并非apply和call真正的用武之地，真正强大的地方是能够扩充函数赖以运行的作用域。
+**其实传递参数并非apply和call真正的用武之地，真正强大的地方是能够扩充函数赖以运行的作用域。**
 
 	window.color="red";
 	var o ={color:'blue'};
