@@ -77,7 +77,7 @@ javasript引擎是`单线程`运行的，浏览器无论在什么时候都有且
 其实回调函数和异步没什么必然联系，只是很多时候结合使用
 
 <figure>
-        <img src="https://lo56ve.github.io/img/async1.jpg">
+        <img src="https://lo56ve.github.io/img/async1.png">
 </figure>
 
 像这里因为f1函数是比较耗时的任务，为了不阻塞主程序的执行，就把f1的代码加上settimeout方法（这方法放置在事件触发线程中，不在主线程，等待主线程执行完成之后，事件触发线程放置到主线程上执行，见js线程和settimeout），此时继续执行f1下面的其他 js代码，如果f1函数执行完毕就调用callback函数即回调函数，也就是f2函数（此函数必须在f1之后执行），这也就是回调函数和异步经常结合的例子。
@@ -91,7 +91,7 @@ javasript引擎是`单线程`运行的，浏览器无论在什么时候都有且
 在f1程序执行完成时候触发done事件，在触发done事件后执行f2
 
 <figure>
-        <img src="https://lo56ve.github.io/img/async2.jpg">
+        <img src="https://lo56ve.github.io/img/async2.png">
 </figure>
 
 这种方法比第一种可以指定多个回调函数，而且可以去耦合，有利于实现模块化。但是缺点是程序变成了程序驱动型，运行流程变得很不清晰。
@@ -105,7 +105,7 @@ javasript引擎是`单线程`运行的，浏览器无论在什么时候都有且
 promise，then可以接受3个函数作为参数，前两个参数对应promise的两种状态fulfilled和rejected的回调函数，第三个函数用于处理进度信息（可选，少用）
 
 <figure>
-        <img src="https://lo56ve.github.io/img/async3-4.jpg">
+        <img src="https://lo56ve.github.io/img/async3-4.png">
 </figure>
 
 ### 后记
