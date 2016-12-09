@@ -1,6 +1,6 @@
 ---
 layout: post
-title: callback,async
+title: 回调函数和异步
 categories: [blog ]
 tags: [ ]
 description: js理解回调函数和异步
