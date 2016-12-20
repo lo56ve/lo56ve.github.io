@@ -89,7 +89,7 @@ rem是指相对根元素（即html元素）的字体大小的单位，假设根�
 
 引入这一个立即执行函数，然后在做页面时候，将设计稿对应的px尺寸改为rem值，1rem为100px，如设计稿500px，在css中设计应为5rem。（注意我这里是以1080px，如果开始的设计稿不是1080px需要改动一下）。
 
-[js_rem](http://www.ruanyifeng.com/blog/2012/12/asynchronous%EF%BC%BFjavascript.html)
+[js_rem](https://github.com/lo56ve/somedemo/tree/master/js_rem)
 
 在移动端开发布局时，通常字体都比较大，在div里面加上一个div时，结果发现外面高度是固定了，里面的div上边不能贴着上边框，，原因应该是默认的字体大小固定了高度，所以在外面的div设置字体大小为0（font-size=0;），去除外面div的字体默认大小撑开的高度
 
