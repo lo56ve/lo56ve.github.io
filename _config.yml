@@ -1,17 +1,17 @@
 # Site settings
-title: 栋仔
+title: 栋叔
 header-img: "img/2.jpg"
-tagline: "栋仔"  
-description: "是否现在，如渴望呼吸般强烈"  
+tagline: "栋叔"  
+description: "不枉年少，清楚自己想要的是什么"  
 baseurl: ""
 #url: "http://azeril.me"  
 #url: "http://localhost:4000"
 
 # About/contact
 owner: 
-  name: "栋仔"
+  name: "栋叔"
   email: 18819441593@163.com
-  bio: "是否现在，你还是如渴望呼吸般强烈"
+  bio: "不枉年少，清楚自己想要的是什么"
 
 # Data
 gavatar: http://dreamofbook.qiniudn.com/Az..png
