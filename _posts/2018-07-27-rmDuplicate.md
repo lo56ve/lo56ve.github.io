@@ -80,3 +80,5 @@ var unique = (a) => [...new Set(a)];
     > 缺点：数组和字符串无法区分，不适用于数组和对象去重
 
 ### 改进版对象处理
+
+![改进版object](../img/20180828_objectpro.png)
