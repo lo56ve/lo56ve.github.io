@@ -130,14 +130,53 @@ ES6提供了很多实用的api，上一篇博文使用到的扩展运算符`...`
 7. 递归遍历对象（深拷贝）
 
     ```
-
+    var obj = {
+        a: 1,
+        b: 'str',
+        c: false,
+        d: null,
+        f: undefined,
+        e: [1, 2, {
+            z: 3
+        }],
+        h: {
+            x: 'yy',
+            w: 'xx'
+        },
+        i: function(h){
+            console.log(h)
+        },
+        k: {}
+    }
+    function clone(obj){
+        var newObj = Object.prototype.toString.call(obj) === '[object Array]' ? [] : {};
+        for (var key in obj) {
+            var val = obj[key];
+            newObj[key] = typeof val === 'object' ? (val ? clone(val) : null) : val;
+        }
+        return newObj;
+    }
+    var objCopy = clone(obj);
+    console.log(objCopy);
     ```
+
+    > for..in 遍历对象**可枚举**的属性
+
+    > `typeof null`也是为object，需要做特殊处理
+
+### 浅拷贝与深拷贝
+
+- 浅拷贝
+
+    浅拷贝是指将对象的属性或者数组的元素依次进行复制，并不会进行递归复制，如果属性或者元素是`object`或者`Array`这类引用类型值，拷贝的是值的指针，拷贝前后的指针都是指向同一个地址，即改变其中一个变量，另一个也跟着改变。如上述第二种方法所显示。
+
+- 深拷贝
+
+    深拷贝会将原对象各个属性或者元素逐个复制，遇到属性或元素为`object`或者`Array`，采用递归等方法将其复制到新对象上。由于`String`和`Number`等基本类型不存在深拷贝，所以递归到基本类型就结束。这是拷贝出来的`object`和原对象不再是指向同一个地址，改动其中一个不会影响另一个。
 
 
 ### 最后
 
-这些方法都是在之前的工作学习中总结下来的，目前总结的深拷贝只有最后两种
+- 这些方法都是在之前的工作学习中总结下来的，目前总结的深拷贝只有最后两种，如果文中有错误或者有更好的方法，欢迎在[issues](https://github.com/lo56ve/lo56ve.github.io/issues)中提出
 
- - 优劣
- - 深浅拷贝区别
- - 欢迎在github issue指出错误或者有更好的方法提供
+- 另外推荐一篇不错的文章 [深入剖析 JavaScript 的深复制](http://jerryzou.com/posts/dive-into-deep-clone-in-javascript/)
